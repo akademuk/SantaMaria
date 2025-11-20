@@ -10,7 +10,8 @@
     --color-text-light: #6b7c70;
     --color-primary: #1a2e22; /* Deep Forest */
     --gradient-primary: linear-gradient(135deg, #1a2e22 0%, #2d4a3e 100%); /* Rich Forest Gradient */
-    --color-accent: #d4c5b5; /* Sand Gold */
+    --color-accent: #d4c5b5; /* Sand Gold - For dark backgrounds */
+    --color-accent-dark: #857566; /* Darker Gold - For light backgrounds (A11y) */
     --color-white: #ffffff;
     --color-dark: #0f1a15;
     
@@ -108,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
     margin-bottom: 1rem;
     font-weight: 600;
 }
