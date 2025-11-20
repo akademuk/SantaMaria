@@ -4,22 +4,20 @@
 */
 
 :root {
-    /* Palette */
+    /* Default (Forest) */
     --color-bg: #f9f7f2;
     --color-text: #2c3e32;
     --color-text-light: #6b7c70;
-    --color-primary: #1a2e22; /* Deep Forest */
-    --gradient-primary: linear-gradient(135deg, #1a2e22 0%, #2d4a3e 100%); /* Rich Forest Gradient */
-    --color-accent: #d4c5b5; /* Sand Gold - For dark backgrounds */
-    --color-accent-dark: #857566; /* Darker Gold - For light backgrounds (A11y) */
+    --color-primary: #1a2e22;
+    --gradient-primary: linear-gradient(135deg, #1a2e22 0%, #2d4a3e 100%);
+    --color-accent: #d4c5b5;
+    --color-accent-dark: #857566;
     --color-white: #ffffff;
     --color-dark: #0f1a15;
-    
-    /* Gradients */
     --gradient-overlay: linear-gradient(180deg, rgba(26,46,34,0.2) 0%, rgba(15,26,21,0.6) 100%);
     --gradient-deep-forest: linear-gradient(135deg, #0f1a15 0%, #1a2e22 50%, #243b2e 100%);
     
-    /* Typography */
+    /* Typography Default */
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Manrope', sans-serif;
     
@@ -32,6 +30,153 @@
     
     /* Transitions */
     --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    /* Component Colors (Default) */
+    --color-label: #6d5e50;
+    --color-text-body: #4a5a50;
+    --color-bg-light: #ffffff;
+}
+
+/* --- THEMES --- */
+
+/* Theme 1: Forest (Default) */
+[data-theme="forest"] {
+    --color-bg: #f9f7f2 !important;
+    --color-text: #2c3e32 !important;
+    --color-text-light: #6b7c70 !important;
+    --color-primary: #1a2e22 !important;
+    --gradient-primary: linear-gradient(135deg, #1a2e22 0%, #2d4a3e 100%) !important;
+    --color-accent: #d4c5b5 !important;
+    --color-accent-dark: #857566 !important;
+    --color-dark: #0f1a15 !important;
+    --gradient-deep-forest: linear-gradient(135deg, #0f1a15 0%, #1a2e22 50%, #243b2e 100%) !important;
+    --color-label: #6d5e50 !important;
+    --color-text-body: #4a5a50 !important;
+    --color-bg-light: #ffffff !important;
+}
+
+/* Theme 2: Ocean */
+[data-theme="ocean"] {
+    --color-bg: #f4f8f9 !important;
+    --color-text: #1c3a40 !important;
+    --color-text-light: #5a7b82 !important;
+    --color-primary: #0e3c45 !important;
+    --gradient-primary: linear-gradient(135deg, #0e3c45 0%, #1a5c69 100%) !important;
+    --color-accent: #d4b595 !important; /* Sand */
+    --color-accent-dark: #a68566 !important;
+    --color-dark: #051b20 !important;
+    --gradient-overlay: linear-gradient(180deg, rgba(14,60,69,0.2) 0%, rgba(5,27,32,0.6) 100%) !important;
+    --gradient-deep-forest: linear-gradient(135deg, #051b20 0%, #0e3c45 50%, #164e5a 100%) !important;
+    --color-label: #5a7b82 !important;
+    --color-text-body: #3e5c63 !important;
+    --color-bg-light: #ffffff !important;
+}
+
+/* Theme 3: Luxury (Black & Gold) */
+[data-theme="luxury"] {
+    --color-bg: #121212 !important;
+    --color-text: #e0e0e0 !important;
+    --color-text-light: #a0a0a0 !important;
+    --color-primary: #d4af37 !important; /* Gold */
+    --gradient-primary: linear-gradient(135deg, #d4af37 0%, #f2d06b 100%) !important;
+    --color-accent: #333333 !important;
+    --color-accent-dark: #555555 !important;
+    --color-white: #1a1a1a !important; /* Inverted for dark mode feel */
+    --color-dark: #000000 !important;
+    --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%) !important;
+    --gradient-deep-forest: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2a2a2a 100%) !important;
+    --color-label: #d4af37 !important;
+    --color-text-body: #b0b0b0 !important;
+    --color-bg-light: #1a1a1a !important;
+}
+/* Fix for Luxury Theme specific elements */
+[data-theme="luxury"] .room-card, 
+[data-theme="luxury"] .bento-item,
+[data-theme="luxury"] .amenity-card,
+[data-theme="luxury"] .team-card,
+[data-theme="luxury"] .contact-box,
+[data-theme="luxury"] .faq-item {
+    background: #1e1e1e;
+    border-color: #333;
+}
+[data-theme="luxury"] .text-body,
+[data-theme="luxury"] p {
+    color: var(--color-text-body);
+}
+[data-theme="luxury"] .section-title,
+[data-theme="luxury"] h1, 
+[data-theme="luxury"] h2, 
+[data-theme="luxury"] h3 {
+    color: #f2d06b;
+}
+[data-theme="luxury"] .btn--primary {
+    color: #000;
+}
+
+/* Theme 4: Sunset (Warm) */
+[data-theme="sunset"] {
+    --color-bg: #fff9f5 !important;
+    --color-text: #4a2c2a !important;
+    --color-text-light: #8c6b69 !important;
+    --color-primary: #8c3a3a !important; /* Terracotta */
+    --gradient-primary: linear-gradient(135deg, #8c3a3a 0%, #b55b5b 100%) !important;
+    --color-accent: #e6c9a8 !important;
+    --color-accent-dark: #bfa382 !important;
+    --color-dark: #2e1a1a !important;
+    --gradient-overlay: linear-gradient(180deg, rgba(140,58,58,0.2) 0%, rgba(46,26,26,0.6) 100%) !important;
+    --gradient-deep-forest: linear-gradient(135deg, #2e1a1a 0%, #8c3a3a 50%, #a64d4d 100%) !important;
+    --color-label: #8c6b69 !important;
+    --color-text-body: #5e3a38 !important;
+    --color-bg-light: #ffffff !important;
+}
+
+/* Theme 5: Minimal (Monochrome) */
+[data-theme="minimal"] {
+    --color-bg: #ffffff !important;
+    --color-text: #111111 !important;
+    --color-text-light: #666666 !important;
+    --color-primary: #000000 !important;
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #333333 100%) !important;
+    --color-accent: #e0e0e0 !important;
+    --color-accent-dark: #999999 !important;
+    --color-dark: #111111 !important;
+    --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%) !important;
+    --gradient-deep-forest: linear-gradient(135deg, #000000 0%, #222222 100%) !important;
+    --color-label: #666666 !important;
+    --color-text-body: #333333 !important;
+    --color-bg-light: #ffffff !important;
+}
+
+/* --- FONTS --- */
+
+/* Font 1: Classic (Default) */
+[data-font="classic"] {
+    --font-heading: 'Cormorant Garamond', serif !important;
+    --font-body: 'Manrope', sans-serif !important;
+}
+
+/* Font 2: Modern */
+[data-font="modern"] {
+    --font-heading: 'Montserrat', sans-serif !important;
+    --font-body: 'Inter', sans-serif !important;
+}
+
+/* Font 3: Elegant */
+[data-font="elegant"] {
+    --font-heading: 'Playfair Display', serif !important;
+    --font-body: 'Lato', sans-serif !important;
+}
+
+/* Font 4: Editorial */
+[data-font="editorial"] {
+    --font-heading: 'Lora', serif !important;
+    --font-body: 'Open Sans', sans-serif !important;
+}
+
+/* Font 5: Bold */
+[data-font="bold"] {
+    --font-heading: 'Oswald', sans-serif !important;
+    --font-body: 'Raleway', sans-serif !important;
 }
 
 /* Reset & Base */
@@ -109,15 +254,29 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-accent-dark);
+    color: var(--color-label);
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-weight: 700; /* Increased weight */
 }
 
 .text-body {
     font-size: 1.1rem;
-    color: var(--color-text-light);
+    color: var(--color-text-body);
     margin-bottom: 1.5rem;
+}
+
+/* Fix for labels on dark backgrounds */
+.bg-dark .section-label,
+.grand-gallery .section-label,
+.infrastructure-scroll .section-label {
+    color: var(--color-accent);
+}
+
+/* Fix for text-body on dark backgrounds */
+.bg-dark .text-body,
+.grand-gallery .text-body,
+.infrastructure-scroll .text-body {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Layout Utilities */
@@ -136,10 +295,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-center { text-align: center; }
-.text-white { color: var(--color-white) !important; }
+.text-white { color: #ffffff !important; }
+.text-white-opacity { color: rgba(255, 255, 255, 0.8) !important; }
 .text-accent { color: var(--color-accent) !important; }
-.bg-dark { background: var(--gradient-deep-forest); color: var(--color-white); }
-.bg-light { background-color: #fff; }
+.bg-dark { background: var(--gradient-deep-forest); color: #ffffff; }
+.bg-light { background-color: var(--color-bg-light); }
 .bg-accent { background-color: var(--color-accent); }
 
 /* Buttons */
@@ -207,6 +367,59 @@ h1, h2, h3, h4, h5, h6 {
 
 .link-arrow:hover::after {
     transform: translateX(5px);
+}
+
+/* =========================================
+   LOADER
+   ========================================= */
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-bg);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s var(--ease-out), visibility 0.8s var(--ease-out);
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loader__logo {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    letter-spacing: 0.05em;
+}
+
+.loader__spinner {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(26, 46, 34, 0.1);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================================
@@ -1002,6 +1215,13 @@ body.nav-open {
     transform: rotate(-5deg);
 }
 
+.medical-reveal__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* =========================================
    INFRASTRUCTURE SCROLL
    ========================================= */
@@ -1509,11 +1729,6 @@ body.nav-open {
     color: var(--color-primary);
     border: none;
     font-weight: 600;
-}
-
-.btn--full:hover {
-    background: var(--color-white);
-    color: var(--color-primary);
 }
 
 /* =========================================

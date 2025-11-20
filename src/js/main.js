@@ -5,6 +5,23 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Loader Logic
+    const loader = document.getElementById('loader');
+    if (loader) {
+        // Ensure loader stays for at least a moment to show branding
+        // But also hide it when window is fully loaded
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 800); // Slight delay for smooth experience
+        });
+        
+        // Fallback in case load event doesn't fire or takes too long
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 5000);
+    }
+
     // Initialize Lenis Smooth Scroll
     if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis({
