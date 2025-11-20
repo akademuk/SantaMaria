@@ -554,6 +554,13 @@ body.nav-open {
     overflow: hidden;
 }
 
+.intro__img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
 .floating-card {
     position: absolute;
     bottom: 30px;
@@ -610,6 +617,13 @@ body.nav-open {
     transition: transform 0.6s ease;
 }
 
+.bento-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .bento-item:hover .bento-bg {
     transform: scale(1.05);
 }
@@ -653,12 +667,9 @@ body.nav-open {
 .family-feature { 
     grid-column: span 1; 
     grid-row: span 1; 
-    background-color: var(--color-accent);
-    color: var(--color-primary);
+
 }
-.family-feature .bento-icon img { filter: none; }
-.family-feature .bento-content h3 { color: var(--color-primary); }
-.family-feature::after { display: none; }
+
 
 /* Bento Grid Responsive */
 @media (max-width: 1024px) {
@@ -954,8 +965,13 @@ body.nav-open {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 2rem;
+    align-items: center;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.feature-item h4 {
+    color: var(--color-white);
 }
 
 .feature-num {
@@ -1134,11 +1150,22 @@ body.nav-open {
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url('../img/img_F55D703B96.jpg'); /* Fallback */
+    background-image: image-set(
+        url('../img/img_F55D703B96.webp') 1x
+    );
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .atmosphere__bg {
+        background-image: url('../img/img_F55D703B96_mobile.webp');
+        background-attachment: scroll; /* Disable fixed on mobile for performance */
+    }
 }
 
 .atmosphere__content {
@@ -1400,7 +1427,7 @@ body.nav-open {
    ========================================= */
 .booking-cta {
     position: relative;
-    background: url('../img/img_07F2DCD781.jpg') center/cover no-repeat fixed;
+    background: url('../img/img_07F2DCD781.jpg') center/cover no-repeat;
     padding: 150px 0;
 }
 
