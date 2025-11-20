@@ -135,16 +135,16 @@
                     <form class="booking-form" style="background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.05);">
                         <div class="form-grid" style="grid-template-columns: 1fr;">
                             <div class="form-group">
-                                <label class="form-label" style="color: var(--color-text);">Ваше ім'я</label>
-                                <input type="text" class="form-input" placeholder="Введіть ім'я" style="background: var(--color-bg);">
+                                <label class="form-label" for="contact-name" style="color: var(--color-text);">Ваше ім'я</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="Введіть ім'я" style="background: var(--color-bg);">
                             </div>
                             <div class="form-group">
-                                <label class="form-label" style="color: var(--color-text);">Email або телефон</label>
-                                <input type="text" class="form-input" placeholder="Контактні дані" style="background: var(--color-bg);">
+                                <label class="form-label" for="contact-email" style="color: var(--color-text);">Email або телефон</label>
+                                <input type="text" id="contact-email" class="form-input" placeholder="Контактні дані" style="background: var(--color-bg);">
                             </div>
                             <div class="form-group">
-                                <label class="form-label" style="color: var(--color-text);">Повідомлення</label>
-                                <textarea class="form-input" rows="5" placeholder="Ваше запитання" style="background: var(--color-bg); height: auto;"></textarea>
+                                <label class="form-label" for="contact-message" style="color: var(--color-text);">Повідомлення</label>
+                                <textarea id="contact-message" class="form-input" rows="5" placeholder="Ваше запитання" style="background: var(--color-bg); height: auto;"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn btn--primary btn--full mt-4">Надіслати</button>
@@ -200,10 +200,10 @@
                     <p class="footer-desc">Experience the pinnacle of luxury in the heart of the jungle. Where nature
                         meets elegance.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="ph ph-instagram-logo"></i></a>
-                        <a href="#" class="social-link"><i class="ph ph-facebook-logo"></i></a>
-                        <a href="#" class="social-link"><i class="ph ph-twitter-logo"></i></a>
-                        <a href="#" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                     </div>
                 </div>
 
@@ -233,7 +233,10 @@
                     <h3 class="footer-heading">Newsletter</h3>
                     <p>Subscribe for exclusive offers and updates.</p>
                     <form class="footer-form">
-                        <input type="email" placeholder="Your Email" required>
+                        <label for="newsletter-email" class="visually-hidden"
+                            style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">Your
+                            Email</label>
+                        <input type="email" id="newsletter-email" placeholder="Your Email" required>
                         <button type="submit" class="btn-gold">Subscribe</button>
                     </form>
                 </div>

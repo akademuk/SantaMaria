@@ -2255,6 +2255,32 @@ details[open] .faq-question::after {
     .hero__title {
         font-size: 3rem;
     }
+
+    /* Fix for Subpage Grids on Mobile */
+    .amenities-grid,
+    .team-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feature-row {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .feature-row.reverse .feature-text {
+        order: 1;
+    }
+
+    .feature-row.reverse .feature-img-box {
+        order: 2;
+    }
+
+    .feature-img-box {
+        height: 300px;
+    }
 }
 
 /* =========================================

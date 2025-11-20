@@ -78,7 +78,7 @@
             <div class="hero__bg">
                 <picture>
     <source srcset="src/img/img_7C42C360BF.webp" type="image/webp">
-    <img src="src/img/img_7C42C360BF.jpg" alt="SPA та оздоровлення" class="hero__img">
+    <img src="src/img/img_7C42C360BF.jpg" alt="SPA та оздоровлення" class="hero__img" fetchpriority="high" width="1920" height="1080">
 </picture>
                 <div class="hero__overlay"></div>
             </div>
@@ -107,7 +107,7 @@
                     <div class="feature-img-box">
                         <picture>
     <source srcset="src/img/img_46ECC3E9DB.webp" type="image/webp">
-    <img src="src/img/img_46ECC3E9DB.jpg" alt="Медичний центр">
+    <img src="src/img/img_46ECC3E9DB.jpg" alt="Медичний центр" loading="lazy" decoding="async" width="600" height="400">
 </picture>
                     </div>
                     <div class="feature-text">
@@ -139,7 +139,7 @@
                         <div class="room-card__img-box">
                             <picture>
     <source srcset="src/img/img_6B71667DC1.webp" type="image/webp">
-    <img src="src/img/img_6B71667DC1.jpg" alt="Масаж" class="room-card__img">
+    <img src="src/img/img_6B71667DC1.jpg" alt="Масаж" class="room-card__img" loading="lazy" decoding="async" width="600" height="400">
 </picture>
                         </div>
                         <div class="room-card__content">
@@ -152,7 +152,7 @@
                         <div class="room-card__img-box">
                             <picture>
     <source srcset="src/img/img_DFBABD5CC3.webp" type="image/webp">
-    <img src="src/img/img_DFBABD5CC3.jpg" alt="Ванни" class="room-card__img">
+    <img src="src/img/img_DFBABD5CC3.jpg" alt="Ванни" class="room-card__img" loading="lazy" decoding="async" width="600" height="400">
 </picture>
                         </div>
                         <div class="room-card__content">
@@ -165,7 +165,7 @@
                         <div class="room-card__img-box">
                             <picture>
     <source srcset="src/img/img_FB746E73E5.webp" type="image/webp">
-    <img src="src/img/img_FB746E73E5.jpg" alt="Спелеокамера" class="room-card__img">
+    <img src="src/img/img_FB746E73E5.jpg" alt="Спелеокамера" class="room-card__img" loading="lazy" decoding="async" width="600" height="400">
 </picture>
                         </div>
                         <div class="room-card__content">
@@ -184,7 +184,7 @@
                     <div class="feature-img-box">
                         <picture>
     <source srcset="src/img/img_47FACC708E.webp" type="image/webp">
-    <img src="src/img/img_47FACC708E.jpg" alt="SPA зона">
+    <img src="src/img/img_47FACC708E.jpg" alt="SPA зона" loading="lazy" decoding="async" width="600" height="400">
 </picture>
                     </div>
                     <div class="feature-text">
@@ -249,10 +249,10 @@
                     <p class="footer-desc">Experience the pinnacle of luxury in the heart of the jungle. Where nature
                         meets elegance.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="ph ph-instagram-logo"></i></a>
-                        <a href="#" class="social-link"><i class="ph ph-facebook-logo"></i></a>
-                        <a href="#" class="social-link"><i class="ph ph-twitter-logo"></i></a>
-                        <a href="#" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                     </div>
                 </div>
 
@@ -282,7 +282,10 @@
                     <h3 class="footer-heading">Newsletter</h3>
                     <p>Subscribe for exclusive offers and updates.</p>
                     <form class="footer-form">
-                        <input type="email" placeholder="Your Email" required>
+                        <label for="newsletter-email" class="visually-hidden"
+                            style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">Your
+                            Email</label>
+                        <input type="email" id="newsletter-email" placeholder="Your Email" required>
                         <button type="submit" class="btn-gold">Subscribe</button>
                     </form>
                 </div>

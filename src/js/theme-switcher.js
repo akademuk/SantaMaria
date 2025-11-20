@@ -119,7 +119,7 @@
             </select>
         </div>
 
-        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee; font-size: 11px; color: #999; line-height: 1.4;">
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 11px; color: #666; line-height: 1.4;">
             Select your preferred style. When finished, remove this script and update CSS variables.
         </div>
     `;
