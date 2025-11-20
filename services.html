@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Послуги — Санта Марія</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="logo__text">Santa Maria</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Головна</a></li>
+                    <li class="nav__item"><a href="rooms.html" class="nav__link">Номери</a></li>
+                    <li class="nav__item"><a href="health.html" class="nav__link">Оздоровлення</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link active">Послуги</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="tel:+380981234567" class="header__phone">+38 (098) 123 45 67</a>
+                <a href="#booking" class="btn btn--primary header__btn">Забронювати</a>
+                <button class="burger-btn"><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Інфраструктура та розваги</h1>
+                <p class="page-subtitle">Ми подбали про те, щоб вам не було нудно</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="services-list">
+                    <div class="service-item">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2070&auto=format&fit=crop" alt="Басейн">
+                        <div class="service-content">
+                            <h2>Басейни</h2>
+                            <p>Відкритий басейн з підігрівом працює в теплу пору року. Критий басейн доступний цілий рік.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" alt="Ресторан">
+                        <div class="service-content">
+                            <h2>Ресторан</h2>
+                            <p>Страви української та європейської кухні. Спеціальне дієтичне меню за призначенням лікаря.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=1974&auto=format&fit=crop" alt="Теніс">
+                        <div class="service-content">
+                            <h2>Спорт</h2>
+                            <p>Тенісний корт, тренажерний зал, більярд та настільний теніс.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Gallery Section for Services -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Галерея послуг</h2>
+                <div class="swiper services-gallery">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop" alt="Massage"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop" alt="Spa"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop" alt="Food"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop" alt="Hotel"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Santa Maria Resort.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script>
+        new Swiper('.services-gallery', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            breakpoints: {
+                768: { slidesPerView: 3 }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номери — Санта Марія</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="logo__text">Santa Maria</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Головна</a></li>
+                    <li class="nav__item"><a href="rooms.html" class="nav__link active">Номери</a></li>
+                    <li class="nav__item"><a href="health.html" class="nav__link">Оздоровлення</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Послуги</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="tel:+380981234567" class="header__phone">+38 (098) 123 45 67</a>
+                <a href="#booking" class="btn btn--primary header__btn">Забронювати</a>
+                <button class="burger-btn"><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Номери та ціни</h1>
+                <p class="page-subtitle">Оберіть ідеальний варіант для вашого відпочинку</p>
+            </div>
+        </section>
+
+        <section class="rooms-list section-padding">
+            <div class="container">
+                <!-- Room Item 1 -->
+                <div class="room-item">
+                    <div class="room-item__img">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop" alt="Стандарт">
+                    </div>
+                    <div class="room-item__content">
+                        <h2 class="room-item__title">Стандарт</h2>
+                        <p class="room-item__desc">Затишний однокімнатний номер площею 20 м². Ідеально підходить для розміщення однієї або двох осіб. У номері є все необхідне для комфортного відпочинку.</p>
+                        <ul class="room-item__features">
+                            <li>Wi-Fi</li>
+                            <li>Телевізор</li>
+                            <li>Душ</li>
+                            <li>Міні-бар</li>
+                        </ul>
+                        
+                        <!-- Mini Gallery Slider for Room -->
+                        <div class="swiper room-mini-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop" alt="Room View 1"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" alt="Room View 2"></div>
+                                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop" alt="Room View 3"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <div class="room-item__bottom">
+                            <span class="price">від 1200 ₴ / ніч</span>
+                            <a href="#booking" class="btn btn--primary">Забронювати</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 2 -->
+                <div class="room-item">
+                    <div class="room-item__img">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop" alt="Напівлюкс">
+                    </div>
+                    <div class="room-item__content">
+                        <h2 class="room-item__title">Напівлюкс</h2>
+                        <p class="room-item__desc">Просторий номер площею 35 м² з виділеною зоною відпочинку. Чудовий вибір для сімей з дітьми або тих, хто цінує простір.</p>
+                        <ul class="room-item__features">
+                            <li>Wi-Fi</li>
+                            <li>Балкон</li>
+                            <li>Ванна</li>
+                            <li>Робоча зона</li>
+                        </ul>
+                        <div class="room-item__bottom">
+                            <span class="price">від 1800 ₴ / ніч</span>
+                            <a href="#booking" class="btn btn--primary">Забронювати</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Item 3 -->
+                <div class="room-item">
+                    <div class="room-item__img">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" alt="Люкс">
+                    </div>
+                    <div class="room-item__content">
+                        <h2 class="room-item__title">Люкс з каміном</h2>
+                        <p class="room-item__desc">Ексклюзивний двокімнатний номер площею 50 м². Вітальня з каміном створює неповторну атмосферу затишку.</p>
+                        <ul class="room-item__features">
+                            <li>Камін</li>
+                            <li>Два санвузли</li>
+                            <li>Тераса</li>
+                            <li>Халати</li>
+                        </ul>
+                        <div class="room-item__bottom">
+                            <span class="price">від 2500 ₴ / ніч</span>
+                            <a href="#booking" class="btn btn--primary">Забронювати</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Santa Maria Resort.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script>
+        // Initialize mini sliders for rooms
+        document.addEventListener('DOMContentLoaded', () => {
+            new Swiper('.room-mini-slider', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+</body>
+</html>

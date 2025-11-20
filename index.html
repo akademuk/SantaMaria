@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Санта Марія — Відпочинок та оздоровлення в Східниці</title>
+    <meta name="description" content="Курортний комплекс Санта Марія в Східниці. Лікування, відпочинок в Карпатах, басейн, бювет мінеральних вод. Бронюйте найкращий відпочинок!">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Libraries CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        /* Canvas positioning */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero__content {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__text">Santa Maria</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Головна</a></li>
+                    <li class="nav__item"><a href="rooms.html" class="nav__link">Номери</a></li>
+                    <li class="nav__item"><a href="health.html" class="nav__link">Оздоровлення</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Послуги</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+380981234567" class="header__phone">+38 (098) 123 45 67</a>
+                <a href="#booking" class="btn btn--primary header__btn">Забронювати</a>
+                <button class="burger-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="hero">
+            <div class="hero__bg">
+                <!-- Sun Animation Elements -->
+                <div class="sun"></div>
+                <div class="sun-glow"></div>
+                <div class="lighting-overlay"></div>
+                
+                <!-- Placeholder for video or high-res image -->
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop" alt="Карпати пейзаж" class="hero__img">
+                <div class="hero__overlay"></div>
+                <canvas id="hero-canvas"></canvas>
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content" data-speed="0.5">
+                    <span class="section-label text-white" style="opacity: 0.8;">Premium Resort & SPA</span>
+                    <h1 class="hero__title">Відпочинок <br>в ритмі <span class="text-accent">природи</span></h1>
+                    <p class="hero__subtitle">Санта Марія — місце, де час зупиняється, а здоров'я відновлюється.</p>
+                    <div class="hero__btns">
+                        <a href="#booking" class="btn btn--primary btn--lg">Забронювати номер</a>
+                        <a href="#video" class="btn btn--outline btn--lg" data-fancybox>
+                            <span style="margin-right: 10px;">▶</span> Відео-тур
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Гортайте вниз</span>
+            </div>
+        </section>
+
+        <!-- Marquee Line -->
+        <div class="marquee-line">
+            <div class="marquee-content">
+                <span>Relax • Nature • Health • Mountains • SPA • Mineral Water • </span>
+                <span>Relax • Nature • Health • Mountains • SPA • Mineral Water • </span>
+            </div>
+        </div>
+
+        <!-- Section 2: Intro / Philosophy with Stats -->
+        <section class="intro section-padding">
+            <div class="container">
+                <div class="intro__grid">
+                    <div class="intro__text-col" data-speed="0.9">
+                        <span class="section-label">Філософія</span>
+                        <h2 class="section-title">Більше ніж <br>просто готель</h2>
+                        <p class="text-body">Курортний комплекс «Санта Марія» — це архітектурна перлина Східниці, де сучасний дизайн розчиняється у віковій тиші карпатських лісів.</p>
+                        <p class="text-body">Ми не просто надаємо житло. Ми створюємо простір для трансформації вашого самопочуття через поєднання передової медицини та цілющих сил природи.</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">750<small>м</small></span>
+                                <span class="stat-label">Висота над рівнем моря</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Власних джерела</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5<small>★</small></span>
+                                <span class="stat-label">Рівень сервісу</span>
+                            </div>
+                        </div>
+
+                        <a href="about.html" class="link-arrow" style="margin-top: 2rem;">Дізнатись більше про нас</a>
+                    </div>
+                    <div class="intro__img-col">
+                        <div class="intro__img-wrapper" data-speed="1.1">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" alt="Інтер'єр готелю" class="intro__img">
+                            <div class="floating-card">
+                                <span>★ Top Choice 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Advantages (Bento Grid) -->
+        <section class="advantages section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <span class="section-label">Чому обирають нас</span>
+                    <h2 class="section-title">Переваги відпочинку</h2>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-item item-large main-feature">
+                        <div class="bento-content">
+                            <div class="bento-icon"><img src="src/images/icon-water.svg" alt=""></div>
+                            <h3>Власний бювет</h3>
+                            <p>Унікальні джерела №1, №13, №1С прямо в готелі. Сила природи на відстані витягнутої руки.</p>
+                        </div>
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop');"></div>
+                    </div>
+                    <div class="bento-item item-tall medical-feature">
+                        <div class="bento-content">
+                            <div class="bento-icon"><img src="src/images/icon-medical.svg" alt=""></div>
+                            <h3>Медицина 2.0</h3>
+                            <p>Сучасний центр діагностики та лікування.</p>
+                        </div>
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop');"></div>
+                    </div>
+                    <div class="bento-item item-wide pool-feature">
+                        <div class="bento-content">
+                            <div class="bento-icon"><img src="src/images/icon-pool.svg" alt=""></div>
+                            <h3>SPA & Wellness</h3>
+                            <p>Басейни з підігрівом та панорамним видом.</p>
+                        </div>
+                        <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2070&auto=format&fit=crop');"></div>
+                    </div>
+                    <div class="bento-item family-feature">
+                        <div class="bento-content">
+                            <div class="bento-icon"><img src="src/images/icon-family.svg" alt=""></div>
+                            <h3>Kids Club</h3>
+                            <p>Анімація та розваги.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Rooms Showcase -->
+        <section class="rooms-showcase section-padding">
+            <div class="container">
+                <div class="section-header flex-header">
+                    <div>
+                        <span class="section-label">Проживання</span>
+                        <h2 class="section-title">Ваш комфорт — наш пріоритет</h2>
+                    </div>
+                    <a href="rooms.html" class="btn btn--outline">Всі номери</a>
+                </div>
+                
+                <!-- Swiper -->
+                <div class="swiper rooms-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide room-card">
+                            <div class="room-card__img-box">
+                                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop" alt="Стандарт" class="room-card__img">
+                            </div>
+                            <div class="room-card__content">
+                                <h3 class="room-card__title">Стандарт</h3>
+                                <p class="room-card__desc">Затишний однокімнатний номер для комфортного відпочинку двох осіб.</p>
+                                <div class="room-card__bottom">
+                                    <span class="room-card__price">від 1200 ₴ / ніч</span>
+                                    <a href="rooms.html" class="link-arrow">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide room-card">
+                            <div class="room-card__img-box">
+                                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop" alt="Напівлюкс" class="room-card__img">
+                            </div>
+                            <div class="room-card__content">
+                                <h3 class="room-card__title">Напівлюкс</h3>
+                                <p class="room-card__desc">Просторий номер з зоною відпочинку, ідеальний для сімей з дітьми.</p>
+                                <div class="room-card__bottom">
+                                    <span class="room-card__price">від 1800 ₴ / ніч</span>
+                                    <a href="rooms.html" class="link-arrow">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide room-card">
+                            <div class="room-card__img-box">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" alt="Люкс" class="room-card__img">
+                            </div>
+                            <div class="room-card__content">
+                                <h3 class="room-card__title">Люкс з каміном</h3>
+                                <p class="room-card__desc">Двокімнатний номер підвищеного комфорту з каміном та балконом.</p>
+                                <div class="room-card__bottom">
+                                    <span class="room-card__price">від 2500 ₴ / ніч</span>
+                                    <a href="rooms.html" class="link-arrow">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Medical Focus (Clip Path Reveal) -->
+        <section class="medical-reveal section-padding bg-dark text-white">
+            <div class="container">
+                <div class="medical-reveal__grid">
+                    <div class="medical-reveal__content">
+                        <span class="section-label text-accent">Оздоровлення</span>
+                        <h2 class="section-title text-white">Відновлення <br>силами природи</h2>
+                        <p class="text-body text-white-opacity">Наша лікувальна база пропонує широкий спектр процедур: від бальнеології та озокеритотерапії до сучасної фізіотерапії.</p>
+                        
+                        <div class="medical-features-list">
+                            <div class="feature-item">
+                                <span class="feature-num">01</span>
+                                <h4>Діагностика</h4>
+                                <p>Сучасне обладнання</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-num">02</span>
+                                <h4>Бальнеологія</h4>
+                                <p>Ванни та душі</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-num">03</span>
+                                <h4>Фізіотерапія</h4>
+                                <p>Магнітотерапія, лазер</p>
+                            </div>
+                        </div>
+                        
+                        <a href="health.html" class="btn btn--primary mt-4">Всі процедури</a>
+                    </div>
+                    <div class="medical-reveal__visual">
+                        <div class="reveal-mask">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070&auto=format&fit=crop" alt="Масаж">
+                        </div>
+                        <div class="floating-badge">
+                            <span>Medical License</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Infrastructure (Horizontal Scroll) -->
+        <section class="infrastructure-scroll">
+            <div class="infra-sticky-wrapper">
+                <div class="infra-text">
+                    <span class="section-label">Інфраструктура</span>
+                    <h2 class="section-title">Все для ідеального <br>відпочинку</h2>
+                    <p class="text-body">Ми подбали про кожну деталь вашого перебування. Від гастрономічних вражень до активного дозвілля.</p>
+                </div>
+                <div class="swiper infra-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2070&auto=format&fit=crop" alt="Басейн">
+                            <div class="infra-card__content">
+                                <h3>Aqua Zone</h3>
+                                <p>Критий басейн з підігрівом</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" alt="Ресторан">
+                            <div class="infra-card__content">
+                                <h3>Ресторан</h3>
+                                <p>Європейська та українська кухня</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1543489822-c49534f3271f?q=80&w=2032&auto=format&fit=crop" alt="Сауна">
+                            <div class="infra-card__content">
+                                <h3>SPA Center</h3>
+                                <p>Сауни та масаж</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=1974&auto=format&fit=crop" alt="Теніс">
+                            <div class="infra-card__content">
+                                <h3>Спорт</h3>
+                                <p>Тенісний корт та тренажерний зал</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1517604931442-71053e6e2619?q=80&w=2070&auto=format&fit=crop" alt="Кінотеатр">
+                            <div class="infra-card__content">
+                                <h3>Кінотеатр</h3>
+                                <p>Вечірні сеанси для всієї родини</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=2070&auto=format&fit=crop" alt="Бібліотека">
+                            <div class="infra-card__content">
+                                <h3>Бібліотека</h3>
+                                <p>Затишне місце для читання</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide infra-card">
+                            <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=2070&auto=format&fit=crop" alt="Дитячий майданчик">
+                            <div class="infra-card__content">
+                                <h3>Дитячий світ</h3>
+                                <p>Сучасний ігровий майданчик</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Grand Gallery (Double Marquee) -->
+        <section class="grand-gallery">
+            <div class="container text-center mb-5">
+                <span class="section-label">Галерея</span>
+                <h2 class="section-title">Атмосфера Санта Марія</h2>
+            </div>
+            
+            <!-- Row 1: Left to Right -->
+            <div class="swiper gallery-loop marquee-row-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1571896349842-6e53ce41e86a?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1571896349842-6e53ce41e86a?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Right to Left -->
+            <div class="swiper gallery-loop marquee-row-2" dir="rtl">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1543489822-c49534f3271f?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1543489822-c49534f3271f?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                    <div class="swiper-slide gallery-slide">
+                        <a href="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1600&auto=format&fit=crop" data-fancybox="gallery">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="Gallery">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Atmosphere (Parallax) -->
+        <section class="atmosphere">
+            <div class="atmosphere__bg" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop');"></div>
+            <div class="container atmosphere__container">
+                <div class="atmosphere__content text-center">
+                    <h2 class="atmosphere__title">Відчуйте магію Карпат</h2>
+                    <p class="atmosphere__text">Чисте гірське повітря, спів птахів та шум лісу — найкращі ліки від стресу.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Testimonials -->
+        <section class="testimonials section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Відгуки</span>
+                    <h2 class="section-title">Що кажуть наші гості</h2>
+                </div>
+                <div class="swiper testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-card__quote-icon">“</div>
+                            <p class="testimonial-card__text">Чудове місце для перезавантаження. Лікування на вищому рівні, персонал дуже уважний. Обов'язково повернемось ще!</p>
+                            <div class="testimonial-card__author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Олена">
+                                <div>
+                                    <h4>Олена К.</h4>
+                                    <span>Київ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-card__quote-icon">“</div>
+                            <p class="testimonial-card__text">Діти в захваті від басейну та майданчика, а ми з дружиною насолоджувались тишею та процедурами. Рекомендую для сімей.</p>
+                            <div class="testimonial-card__author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Андрій">
+                                <div>
+                                    <h4>Андрій М.</h4>
+                                    <span>Львів</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-card__quote-icon">“</div>
+                            <p class="testimonial-card__text">Дуже смачна кухня і затишні номери. Бювет прямо в готелі - це величезний плюс. Дякуємо за гостинність!</p>
+                            <div class="testimonial-card__author">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Марія">
+                                <div>
+                                    <h4>Марія В.</h4>
+                                    <span>Одеса</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Special Offers -->
+        <section class="offers section-padding">
+            <div class="container">
+                <div class="offer-banner">
+                    <div class="offer-banner__content">
+                        <span class="offer-tag">Акція</span>
+                        <h2 class="offer-title">Раннє бронювання Літо 2025</h2>
+                        <p class="offer-desc">Забронюйте відпочинок на літній сезон до 1 травня та отримайте знижку 10% на проживання.</p>
+                        <a href="#booking" class="btn btn--white">Отримати знижку</a>
+                    </div>
+                    <div class="offer-banner__img">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=2070&auto=format&fit=crop" alt="Літо в Карпатах">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Location -->
+        <section class="location section-padding">
+            <div class="container">
+                <div class="location__grid">
+                    <div class="location__info">
+                        <span class="section-label">Локація</span>
+                        <h2 class="section-title">Східниця — перлина Карпат</h2>
+                        <p class="text-body">Наш комплекс знаходиться в самому серці бальнеологічного курорту Східниця. Це унікальне місце, відоме своїми мінеральними джерелами типу "Нафтуся".</p>
+                        <ul class="location__list">
+                            <li><img src="src/images/icon-pin.svg" alt=""> Львівська область, смт. Східниця</li>
+                            <li><img src="src/images/icon-train.svg" alt=""> Трансфер з Трускавця або Львова</li>
+                            <li><img src="src/images/icon-mountain.svg" alt=""> Поруч з національним парком "Сколівські Бескиди"</li>
+                        </ul>
+                        <a href="contacts.html" class="link-arrow">Як доїхати</a>
+                    </div>
+                    <div class="location__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.667673486784!2d23.3395!3d49.2295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a4e4e4e4e4e4e%3A0x4e4e4e4e4e4e4e4e!2sSkhidnytsia!5e0!3m2!1sen!2sua!4v1620000000000!5m2!1sen!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Blog Preview -->
+        <section class="blog-preview section-padding bg-light">
+            <div class="container">
+                <div class="section-header flex-header">
+                    <h2 class="section-title">Новини та статті</h2>
+                    <a href="blog.html" class="link-arrow">Читати блог</a>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop" alt="Осінь в Карпатах">
+                        </div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">20 Листопада 2025</span>
+                            <h3 class="blog-card__title"><a href="#">Осінній відпочинок: чому варто їхати в Карпати зараз</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Мінеральні води">
+                        </div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">15 Листопада 2025</span>
+                            <h3 class="blog-card__title"><a href="#">Лікувальні властивості води "Нафтуся"</a></h3>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="https://images.unsplash.com/photo-1516746924755-babd37e14997?q=80&w=1974&auto=format&fit=crop" alt="Сімейний вікенд">
+                        </div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">10 Листопада 2025</span>
+                            <h3 class="blog-card__title"><a href="#">Ідеї для сімейного вікенду в Східниці</a></h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Booking Form / CTA -->
+        <section id="booking" class="booking-cta section-padding bg-accent text-white">
+            <div class="container">
+                <div class="booking-cta__wrapper">
+                    <div class="booking-cta__text">
+                        <h2 class="section-title text-white">Забронюйте свій ідеальний відпочинок</h2>
+                        <p class="text-white-opacity">Залиште заявку, і ми зв'яжемося з вами для уточнення деталей та підбору найкращого номеру.</p>
+                    </div>
+                    <form class="booking-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше ім'я" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Телефон" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-input">
+                                <option value="" disabled selected>Тип номеру</option>
+                                <option value="standard">Стандарт</option>
+                                <option value="semilux">Напівлюкс</option>
+                                <option value="lux">Люкс</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--white btn--full">Надіслати заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <h2 class="footer-logo">Santa Maria</h2>
+                    <p class="footer-desc">Experience the pinnacle of luxury in the heart of the jungle. Where nature meets elegance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-col links-col">
+                    <h3 class="footer-heading">Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#villas">Villas</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#wellness">Wellness</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col contact-col">
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Jungle Ave, Costa Rica</li>
+                        <li><i class="fas fa-phone"></i> +506 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> reservations@santamaria.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-col newsletter-col">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn-gold">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Santa Maria Resort. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="src/js/hero-canvas.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/creative.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
