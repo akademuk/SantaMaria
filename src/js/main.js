@@ -287,23 +287,23 @@ function optimizeMediaLoading() {
 
 function initMobileNav() {
     const burgerBtn = document.querySelector('.burger-btn');
-    const nav = document.querySelector('.nav');
+    const mobileMenu = document.getElementById('mobile-menu');
     const header = document.querySelector('.header');
 
-    if (!burgerBtn || !nav || !header) {
+    if (!burgerBtn || !mobileMenu || !header) {
         return;
     }
 
     const closeMenu = () => {
-        nav.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
         document.body.classList.remove('nav-open');
         header.classList.remove('nav-active');
         burgerBtn.setAttribute('aria-expanded', 'false');
     };
 
     const toggleMenu = () => {
-        const willOpen = !nav.classList.contains('is-open');
-        nav.classList.toggle('is-open', willOpen);
+        const willOpen = !mobileMenu.classList.contains('is-open');
+        mobileMenu.classList.toggle('is-open', willOpen);
         document.body.classList.toggle('nav-open', willOpen);
         header.classList.toggle('nav-active', willOpen);
         burgerBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
@@ -311,7 +311,7 @@ function initMobileNav() {
 
     burgerBtn.addEventListener('click', toggleMenu);
 
-    nav.querySelectorAll('.nav__link').forEach(link => {
+    mobileMenu.querySelectorAll('.nav__link').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
 

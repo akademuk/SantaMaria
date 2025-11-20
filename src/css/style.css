@@ -1,4 +1,4 @@
-/* 
+﻿/* 
    SANTA MARIA RESORT - PREMIUM STYLES 2025 
    Design System: Nature, Luxury, Silence
 */
@@ -7,11 +7,11 @@
     /* Default (Forest) */
     --color-bg: #f9f7f2;
     --color-text: #2c3e32;
-    --color-text-light: #6b7c70;
+    --color-text-light: #5e6e63;
     --color-primary: #1a2e22;
     --gradient-primary: linear-gradient(135deg, #1a2e22 0%, #2d4a3e 100%);
     --color-accent: #d4c5b5;
-    --color-accent-dark: #857566;
+    --color-accent-dark: #7a6a5b;
     --color-white: #ffffff;
     --color-dark: #0f1a15;
     --gradient-overlay: linear-gradient(180deg, rgba(26,46,34,0.2) 0%, rgba(15,26,21,0.6) 100%);
@@ -43,11 +43,11 @@
 [data-theme="forest"] {
     --color-bg: #f9f7f2 !important;
     --color-text: #2c3e32 !important;
-    --color-text-light: #6b7c70 !important;
+    --color-text-light: #5e6e63 !important;
     --color-primary: #1a2e22 !important;
     --gradient-primary: linear-gradient(135deg, #1a2e22 0%, #2d4a3e 100%) !important;
     --color-accent: #d4c5b5 !important;
-    --color-accent-dark: #857566 !important;
+    --color-accent-dark: #7a6a5b !important;
     --color-dark: #0f1a15 !important;
     --gradient-deep-forest: linear-gradient(135deg, #0f1a15 0%, #1a2e22 50%, #243b2e 100%) !important;
     --color-label: #6d5e50 !important;
@@ -59,11 +59,11 @@
 [data-theme="ocean"] {
     --color-bg: #f4f8f9 !important;
     --color-text: #1c3a40 !important;
-    --color-text-light: #5a7b82 !important;
+    --color-text-light: #4a6b72 !important;
     --color-primary: #0e3c45 !important;
     --gradient-primary: linear-gradient(135deg, #0e3c45 0%, #1a5c69 100%) !important;
     --color-accent: #d4b595 !important; /* Sand */
-    --color-accent-dark: #a68566 !important;
+    --color-accent-dark: #8f7052 !important;
     --color-dark: #051b20 !important;
     --gradient-overlay: linear-gradient(180deg, rgba(14,60,69,0.2) 0%, rgba(5,27,32,0.6) 100%) !important;
     --gradient-deep-forest: linear-gradient(135deg, #051b20 0%, #0e3c45 50%, #164e5a 100%) !important;
@@ -121,7 +121,7 @@
     --color-primary: #8c3a3a !important; /* Terracotta */
     --gradient-primary: linear-gradient(135deg, #8c3a3a 0%, #b55b5b 100%) !important;
     --color-accent: #e6c9a8 !important;
-    --color-accent-dark: #bfa382 !important;
+    --color-accent-dark: #967d60 !important;
     --color-dark: #2e1a1a !important;
     --gradient-overlay: linear-gradient(180deg, rgba(140,58,58,0.2) 0%, rgba(46,26,26,0.6) 100%) !important;
     --gradient-deep-forest: linear-gradient(135deg, #2e1a1a 0%, #8c3a3a 50%, #a64d4d 100%) !important;
@@ -138,7 +138,7 @@
     --color-primary: #000000 !important;
     --gradient-primary: linear-gradient(135deg, #000000 0%, #333333 100%) !important;
     --color-accent: #e0e0e0 !important;
-    --color-accent-dark: #999999 !important;
+    --color-accent-dark: #757575 !important;
     --color-dark: #111111 !important;
     --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%) !important;
     --gradient-deep-forest: linear-gradient(135deg, #000000 0%, #222222 100%) !important;
@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .link-arrow::after {
-    content: '→';
+    content: '\2192';
     margin-left: 8px;
     transition: transform 0.3s ease;
 }
@@ -428,8 +428,9 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 95%;
     max-width: 1600px;
     z-index: 100;
@@ -520,6 +521,8 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     flex-direction: column;
     gap: 6px;
+    padding: 5px;
+    z-index: 110;
 }
 
 .burger-btn span {
@@ -527,17 +530,34 @@ h1, h2, h3, h4, h5, h6 {
     width: 24px;
     height: 2px;
     background-color: var(--color-white);
+    transition: all 0.3s ease;
 }
 
 .header.scrolled .burger-btn span {
     background-color: var(--color-primary);
 }
 
+/* Burger Animation */
+body.nav-open .burger-btn span:first-child {
+    transform: translateY(4px) rotate(45deg);
+    background-color: var(--color-white); /* Always white on dark menu */
+}
+
+body.nav-open .burger-btn span:last-child {
+    transform: translateY(-4px) rotate(-45deg); /* Adjusted for gap */
+    background-color: var(--color-white);
+}
+
 body.nav-open {
     overflow: hidden;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
+    .header__phone,
+    .header__btn {
+        display: none;
+    }
+
     .burger-btn {
         display: flex;
         position: relative;
@@ -547,18 +567,22 @@ body.nav-open {
     .nav {
         position: fixed;
         inset: 0;
-        background: rgba(15, 26, 21, 0.95);
-        transform: translateY(-100%);
-        transition: transform 0.4s var(--ease-out);
+        background: rgba(15, 26, 21, 0.98);
+        backdrop-filter: blur(15px);
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease;
         padding: 120px 2rem 2rem;
         display: flex;
         justify-content: center;
+        align-items: center;
         pointer-events: none;
         z-index: 105;
     }
 
     .nav.is-open {
-        transform: translateY(0);
+        transform: translateX(0);
+        visibility: visible;
         pointer-events: auto;
     }
 
@@ -656,6 +680,7 @@ body.nav-open {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .scroll-indicator {
@@ -714,6 +739,11 @@ body.nav-open {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+@media (max-width: 1280px) {
+    .marquee-line {
+        transform: none;
+    }
+}
 .marquee-content {
     display: inline-block;
     animation: marquee 60s linear infinite;
@@ -891,7 +921,7 @@ body.nav-open {
         grid-template-rows: auto;
         grid-auto-rows: 350px;
     }
-    .item-large { grid-column: span 2; grid-row: span 1; }
+    .item-large { grid-column: span 2; grid-row: span 2; }
     .item-tall { grid-column: span 1; grid-row: span 2; }
     .item-wide { grid-column: span 1; grid-row: span 1; }
     .family-feature { grid-column: span 1; grid-row: span 1; }
@@ -1618,7 +1648,7 @@ body.nav-open {
 
 .blog-card__date {
     font-size: 0.85rem;
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: block;
@@ -1658,7 +1688,8 @@ body.nav-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 46, 34, 0.85); /* Dark overlay */
+    background: var(--color-dark);
+    opacity: 0.85;
     z-index: 1;
 }
 
@@ -2178,24 +2209,125 @@ details[open] .faq-question::after {
     color: var(--color-text-light);
 }
 
-/* Responsive Subpages */
-@media (max-width: 1024px) {
-    .amenities-grid, .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .feature-row {
+/* =========================================
+   RESPONSIVE UTILITIES
+   ========================================= */
+@media (max-width: 900px) {
+    .intro__grid,
+    .medical-reveal__grid,
+    .location__grid,
+    .booking-cta__wrapper,
+    .offer-banner,
+    .form-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .feature-row.reverse .feature-text { order: 0; }
-    .feature-row.reverse .feature-img-box { order: 0; }
-    .feature-img-box { height: 400px; }
-    .contact-grid { grid-template-columns: 1fr; }
-}
 
-@media (max-width: 600px) {
-    .amenities-grid, .team-grid {
+    .blog-grid {
         grid-template-columns: 1fr;
     }
-    .page-hero { min-height: 400px; }
+
+    .offer-banner__content {
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .offer-banner__img {
+        min-height: 300px;
+        order: -1;
+    }
+
+    .location__map {
+        height: 350px;
+    }
+
+    .booking-cta {
+        padding: 80px 0;
+    }
+
+    .booking-form {
+        padding: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero__title {
+        font-size: 3rem;
+    }
+}
+
+/* =========================================
+   MOBILE NAVIGATION REFACTOR
+   ========================================= */
+
+/* Desktop Nav Visibility */
+@media (max-width: 900px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 26, 21, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease;
+    padding: 120px 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 99; /* Below header (100) but above content */
+}
+
+.mobile-nav-overlay.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-nav-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+.mobile-nav-content .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-nav-content .nav__link {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-white);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-nav-overlay.is-open .nav__link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for links */
+.mobile-nav-overlay.is-open .nav__item:nth-child(1) .nav__link { transition-delay: 0.1s; }
+.mobile-nav-overlay.is-open .nav__item:nth-child(2) .nav__link { transition-delay: 0.2s; }
+.mobile-nav-overlay.is-open .nav__item:nth-child(3) .nav__link { transition-delay: 0.3s; }
+.mobile-nav-overlay.is-open .nav__item:nth-child(4) .nav__link { transition-delay: 0.4s; }
+.mobile-nav-overlay.is-open .nav__item:nth-child(5) .nav__link { transition-delay: 0.5s; }
+
+.mobile-nav-content .nav__link:hover {
+    color: var(--color-accent);
+}
+
+.mobile-nav-content .nav__link.active {
+    color: var(--color-accent);
 }

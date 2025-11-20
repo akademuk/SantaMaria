@@ -41,7 +41,7 @@
     container.id = 'theme-switcher-panel';
     container.style.cssText = `
         position: fixed;
-        bottom: 20px;
+        bottom: 50px;
         left: 20px;
         background: white;
         padding: 20px;
@@ -111,7 +111,7 @@
         </div>
 
         <div>
-            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Typography</label>
+            <label for="font-select" style="display: block; font-size: 12px; color: #666; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Typography</label>
             <select id="font-select" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-family: inherit; font-size: 14px;">
                 ${fonts.map(f => `
                     <option value="${f.id}" ${f.id === currentFont ? 'selected' : ''}>${f.name}</option>
