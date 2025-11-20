@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти — Санта Марія</title>
+    <meta name="description" content="Контактна інформація готелю Санта Марія. Адреса, телефони, карта проїзду та форма зворотнього зв'язку.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Critical hero preload -->
+    <link rel="preload" as="image" href="src/img/img_284AFDA3AB.webp" type="image/webp" imagesizes="100vw"
+        imagesrcset="src/img/img_284AFDA3AB.webp 1x, src/img/img_284AFDA3AB.jpg 2x">
+    
+    <!-- Libraries CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Main CSS -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header class="header">
-        <div class="container header__container">
+        <div class="header__inner">
             <a href="index.html" class="logo">
                 <span class="logo__text">Santa Maria</span>
             </a>
-            <nav class="nav">
+
+            <nav class="nav" id="site-navigation" aria-label="Основна навігація">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__link">Головна</a></li>
                     <li class="nav__item"><a href="rooms.html" class="nav__link">Номери</a></li>
@@ -24,71 +41,206 @@
                     <li class="nav__item"><a href="contacts.html" class="nav__link active">Контакти</a></li>
                 </ul>
             </nav>
+
             <div class="header__actions">
                 <a href="tel:+380981234567" class="header__phone">+38 (098) 123 45 67</a>
                 <a href="#booking" class="btn btn--primary header__btn">Забронювати</a>
-                <button class="burger-btn"><span></span><span></span></button>
+                <button class="burger-btn" aria-label="Меню" aria-controls="site-navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1 class="page-title">Контакти</h1>
-                <p class="page-subtitle">Ми завжди раді вас чути</p>
+        <!-- Section 1: Page Hero -->
+        <section class="hero page-hero">
+            <div class="hero__bg">
+                <picture>
+    <source srcset="src/img/img_284AFDA3AB.webp" type="image/webp">
+    <img src="src/img/img_284AFDA3AB.jpg" alt="Рецепція" class="hero__img">
+</picture>
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content text-center">
+                    <span class="section-label text-white">Зв'язок</span>
+                    <h1 class="hero__title">Наші <span class="text-accent">Контакти</span></h1>
+                    <p class="hero__subtitle">Ми завжди раді відповісти на ваші запитання та допомогти з організацією відпочинку.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Section 2: Contact Info Grid -->
         <section class="section-padding">
             <div class="container">
-                <div class="contacts-grid">
-                    <div class="contacts-info">
-                        <h2>Наші координати</h2>
-                        <ul class="contacts-list">
-                            <li>
-                                <strong>Адреса:</strong>
-                                <p>Львівська область, смт. Східниця, вул. Незалежності, 35</p>
-                            </li>
-                            <li>
-                                <strong>Телефони:</strong>
-                                <p><a href="tel:+380981234567">+38 (098) 123 45 67</a></p>
-                                <p><a href="tel:+380324712345">+38 (03247) 12 345</a></p>
-                            </li>
-                            <li>
-                                <strong>Email:</strong>
-                                <p><a href="mailto:info@santamaria.com">info@santamaria.com</a></p>
-                            </li>
-                        </ul>
+                <div class="contact-grid">
+                    <!-- Phone -->
+                    <div class="contact-box">
+                        <div class="contact-icon"><i class="ph ph-phone"></i></div>
+                        <h3>Телефони</h3>
+                        <p><a href="tel:+380981234567">+38 (098) 123 45 67</a></p>
+                        <p><a href="tel:+380987654321">+38 (098) 765 43 21</a></p>
                     </div>
-                    <div class="contacts-form-wrapper">
-                        <h2>Напишіть нам</h2>
-                        <form class="contact-form">
-                            <div class="form-group">
-                                <input type="text" placeholder="Ваше ім'я" class="form-input">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Email" class="form-input">
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Повідомлення" class="form-input" rows="4"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn--primary">Надіслати</button>
-                        </form>
+                    <!-- Email -->
+                    <div class="contact-box">
+                        <div class="contact-icon"><i class="ph ph-envelope"></i></div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@santamaria.com">info@santamaria.com</a></p>
+                        <p><a href="mailto:booking@santamaria.com">booking@santamaria.com</a></p>
                     </div>
-                </div>
-                <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.667673486784!2d23.3395!3d49.2295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a4e4e4e4e4e4e%3A0x4e4e4e4e4e4e4e4e!2sSkhidnytsia!5e0!3m2!1sen!2sua!4v1620000000000!5m2!1sen!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <!-- Address -->
+                    <div class="contact-box">
+                        <div class="contact-icon"><i class="ph ph-map-pin"></i></div>
+                        <h3>Адреса</h3>
+                        <p>Львівська обл., смт. Східниця,<br>вул. Незалежності, 1</p>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Section 3: Map -->
+        <section class="location__map" style="height: 500px; border-radius: 0;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.678901234567!2d23.35678901234567!3d49.23456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDE0JzA0LjQiTiAyM8KwMjEnMjQuNCJF!5e0!3m2!1suk!2sua!4v1620000000000!5m2!1suk!2sua" width="100%" height="100%" style="border:0; filter: grayscale(100%);" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <!-- Section 4: Feedback Form -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Напишіть нам</span>
+                    <h2 class="section-title">Зворотній зв'язок</h2>
+                </div>
+                <div class="booking-cta__wrapper" style="max-width: 800px; margin: 0 auto; display: block;">
+                    <form class="booking-form" style="background: white; box-shadow: 0 20px 60px rgba(0,0,0,0.05);">
+                        <div class="form-grid" style="grid-template-columns: 1fr;">
+                            <div class="form-group">
+                                <label class="form-label" style="color: var(--color-text);">Ваше ім'я</label>
+                                <input type="text" class="form-input" placeholder="Введіть ім'я" style="background: var(--color-bg);">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color: var(--color-text);">Email або телефон</label>
+                                <input type="text" class="form-input" placeholder="Контактні дані" style="background: var(--color-bg);">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" style="color: var(--color-text);">Повідомлення</label>
+                                <textarea class="form-input" rows="5" placeholder="Ваше запитання" style="background: var(--color-bg); height: auto;"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full mt-4">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: FAQ -->
+        <section class="section-padding">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Часті запитання</h2>
+                </div>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            Який час заїзду та виїзду?
+                        </summary>
+                        <div class="faq-answer">
+                            <p class="text-body">Заїзд здійснюється після 14:00, виїзд — до 12:00. Ранній заїзд та пізній виїзд можливі за попередньою домовленістю та додаткову оплату.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            Чи входить харчування у вартість?
+                        </summary>
+                        <div class="faq-answer">
+                            <p class="text-body">Так, у вартість проживання включено триразове харчування за системою "шведський стіл" або замовне меню, залежно від обраного тарифу.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            Чи можна з домашніми тваринами?
+                        </summary>
+                        <div class="faq-answer">
+                            <p class="text-body">Проживання з домашніми тваринами дозволено за попереднім узгодженням з адміністрацією. Може стягуватися додаткова плата за прибирання.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Santa Maria Resort.</p>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <h2 class="footer-logo">Santa Maria</h2>
+                    <p class="footer-desc">Experience the pinnacle of luxury in the heart of the jungle. Where nature
+                        meets elegance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-col links-col">
+                    <h3 class="footer-heading">Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#villas">Villas</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#wellness">Wellness</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col contact-col">
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="ph ph-map-pin"></i> 123 Jungle Ave, Costa Rica</li>
+                        <li><i class="ph ph-phone"></i> +506 1234 5678</li>
+                        <li><i class="ph ph-envelope"></i> reservations@santamaria.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-col newsletter-col">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn-gold">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Santa Maria Resort. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/creative.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 </html>

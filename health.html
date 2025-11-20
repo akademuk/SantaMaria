@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оздоровлення — Санта Марія</title>
+    <meta name="description" content="Медичний центр та SPA в готелі Санта Марія. Відновлення сил, лікувальні процедури та релакс в Карпатах.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Critical hero preload -->
+    <link rel="preload" as="image" href="src/img/img_7C42C360BF.webp" type="image/webp" imagesizes="100vw"
+        imagesrcset="src/img/img_7C42C360BF.webp 1x, src/img/img_7C42C360BF.jpg 2x">
+    
+    <!-- Libraries CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Main CSS -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header class="header">
-        <div class="container header__container">
+        <div class="header__inner">
             <a href="index.html" class="logo">
                 <span class="logo__text">Santa Maria</span>
             </a>
-            <nav class="nav">
+
+            <nav class="nav" id="site-navigation" aria-label="Основна навігація">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="index.html" class="nav__link">Головна</a></li>
                     <li class="nav__item"><a href="rooms.html" class="nav__link">Номери</a></li>
@@ -24,56 +41,255 @@
                     <li class="nav__item"><a href="contacts.html" class="nav__link">Контакти</a></li>
                 </ul>
             </nav>
+
             <div class="header__actions">
                 <a href="tel:+380981234567" class="header__phone">+38 (098) 123 45 67</a>
                 <a href="#booking" class="btn btn--primary header__btn">Забронювати</a>
-                <button class="burger-btn"><span></span><span></span></button>
+                <button class="burger-btn" aria-label="Меню" aria-controls="site-navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1 class="page-title">Медичний центр</h1>
-                <p class="page-subtitle">Відновлення гармонії тіла та душі</p>
+        <!-- Section 1: Page Hero -->
+        <section class="hero page-hero">
+            <div class="hero__bg">
+                <picture>
+    <source srcset="src/img/img_7C42C360BF.webp" type="image/webp">
+    <img src="src/img/img_7C42C360BF.jpg" alt="SPA та оздоровлення" class="hero__img">
+</picture>
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content text-center">
+                    <span class="section-label text-white">Здоров'я</span>
+                    <h1 class="hero__title">Відновлення <span class="text-accent">Сил</span></h1>
+                    <p class="hero__subtitle">Сучасний медичний центр та SPA-комплекс для вашого повного перезавантаження.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Section 2: Intro -->
         <section class="section-padding">
+            <div class="container text-center" style="max-width: 800px;">
+                <span class="section-label">Наша філософія</span>
+                <h2 class="section-title">Гармонія тіла та душі</h2>
+                <p class="text-body">Ми поєднали цілющу силу карпатської природи з передовими медичними технологіями. Наші програми розроблені професійними лікарями для ефективного лікування, профілактики та релаксації.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Medical Center Feature -->
+        <section class="section-padding bg-light">
             <div class="container">
-                <div class="text-block">
-                    <h2>Лікувальна база</h2>
-                    <p>Наш медичний центр оснащений сучасним обладнанням для діагностики та лікування. Ми спеціалізуємося на захворюваннях шлунково-кишкового тракту, нирок, обміну речовин.</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Бальнеологія</h3>
-                        <p>Лікувальні ванни, підводний душ-масаж, висхідний душ.</p>
+                <div class="feature-row">
+                    <div class="feature-img-box">
+                        <picture>
+    <source srcset="src/img/img_46ECC3E9DB.webp" type="image/webp">
+    <img src="src/img/img_46ECC3E9DB.jpg" alt="Медичний центр">
+</picture>
                     </div>
-                    <div class="service-card">
-                        <h3>Фізіотерапія</h3>
-                        <p>Магнітотерапія, лазеротерапія, електрофорез.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Озокеритотерапія</h3>
-                        <p>Теплолікування з використанням гірського воску.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Масаж</h3>
-                        <p>Лікувальний, розслабляючий, антицелюлітний масаж.</p>
+                    <div class="feature-text">
+                        <span class="section-label text-accent">Медицина</span>
+                        <h2 class="section-title">Сучасний медичний центр</h2>
+                        <p class="text-body">Наш медичний центр оснащений новітнім обладнанням для діагностики та лікування. Ми спеціалізуємося на захворюваннях дихальних шляхів, опорно-рухового апарату та нервової системи.</p>
+                        <ul class="feature-list">
+                            <li>Консультації лікарів вищої категорії</li>
+                            <li>Фізіотерапевтичні процедури</li>
+                            <li>Бальнеологія та гідропатія</li>
+                            <li>Інгаляторій та спелеокамера</li>
+                        </ul>
+                        <a href="#procedures" class="btn btn--primary mt-4">Переглянути процедури</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Section 4: Procedures Grid -->
+        <section id="procedures" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Послуги</span>
+                    <h2 class="section-title">Популярні процедури</h2>
+                </div>
+                <div class="rooms-grid"> <!-- Reusing grid layout -->
+                    <!-- Card 1 -->
+                    <div class="room-card">
+                        <div class="room-card__img-box">
+                            <picture>
+    <source srcset="src/img/img_6B71667DC1.webp" type="image/webp">
+    <img src="src/img/img_6B71667DC1.jpg" alt="Масаж" class="room-card__img">
+</picture>
+                        </div>
+                        <div class="room-card__content">
+                            <h3 class="room-card__title">Лікувальний масаж</h3>
+                            <p class="room-card__desc">Різні види масажу для зняття напруги, покращення кровообігу та відновлення м'язів.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="room-card">
+                        <div class="room-card__img-box">
+                            <picture>
+    <source srcset="src/img/img_DFBABD5CC3.webp" type="image/webp">
+    <img src="src/img/img_DFBABD5CC3.jpg" alt="Ванни" class="room-card__img">
+</picture>
+                        </div>
+                        <div class="room-card__content">
+                            <h3 class="room-card__title">Мінеральні ванни</h3>
+                            <p class="room-card__desc">Ванни з додаванням цілющих трав та мінералів для омолодження шкіри та заспокоєння.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="room-card">
+                        <div class="room-card__img-box">
+                            <picture>
+    <source srcset="src/img/img_FB746E73E5.webp" type="image/webp">
+    <img src="src/img/img_FB746E73E5.jpg" alt="Спелеокамера" class="room-card__img">
+</picture>
+                        </div>
+                        <div class="room-card__content">
+                            <h3 class="room-card__title">Спелеокамера</h3>
+                            <p class="room-card__desc">Перебування в соляній кімнаті, що імітує мікроклімат соляних шахт. Корисно для дихання.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: SPA Zone Feature -->
+        <section class="section-padding bg-dark text-white">
+            <div class="container">
+                <div class="feature-row feature-row--reverse">
+                    <div class="feature-img-box">
+                        <picture>
+    <source srcset="src/img/img_47FACC708E.webp" type="image/webp">
+    <img src="src/img/img_47FACC708E.jpg" alt="SPA зона">
+</picture>
+                    </div>
+                    <div class="feature-text">
+                        <span class="section-label text-accent">Релакс</span>
+                        <h2 class="section-title text-white">SPA-зона</h2>
+                        <p class="text-body text-white-opacity">Забудьте про буденні турботи у нашому SPA-центрі. До ваших послуг критий басейн з підігрівом, фінська сауна та римська парна.</p>
+                        <ul class="feature-list">
+                            <li style="color: rgba(255,255,255,0.8);">Басейн з протитечією</li>
+                            <li style="color: rgba(255,255,255,0.8);">Фінська сауна</li>
+                            <li style="color: rgba(255,255,255,0.8);">Зона відпочинку з шезлонгами</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Mineral Water -->
+        <section class="section-padding">
+            <div class="container text-center">
+                <span class="section-label">Дар природи</span>
+                <h2 class="section-title">Власний бювет мінеральних вод</h2>
+                <p class="text-body mb-5" style="max-width: 700px; margin-left: auto; margin-right: auto;">Ми маємо власний бювет з унікальними мінеральними водами, які доставляються безпосередньо з джерел. Вода зберігає всі свої лікувальні властивості.</p>
+                
+                <div class="amenities-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="amenity-card">
+                        <div class="amenity-icon"><i class="ph ph-drop"></i></div>
+                        <h3 class="amenity-title">Нафтуся</h3>
+                        <p class="text-sm mt-2">Для нирок та обміну речовин</p>
+                    </div>
+                    <div class="amenity-card">
+                        <div class="amenity-icon"><i class="ph ph-drop"></i></div>
+                        <h3 class="amenity-title">Марія</h3>
+                        <p class="text-sm mt-2">Для шлунку та кишечника</p>
+                    </div>
+                    <div class="amenity-card">
+                        <div class="amenity-icon"><i class="ph ph-drop"></i></div>
+                        <h3 class="amenity-title">Софія</h3>
+                        <p class="text-sm mt-2">Для травлення</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Booking CTA -->
+        <section class="booking-cta section-padding bg-accent text-white">
+            <div class="container text-center">
+                <h2 class="section-title text-white">Подаруйте собі здоров'я</h2>
+                <p class="text-white-opacity mb-4">Забронюйте оздоровчий тур вже сьогодні</p>
+                <a href="contacts.html" class="btn btn--white">Зв'язатися з нами</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Santa Maria Resort.</p>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <h2 class="footer-logo">Santa Maria</h2>
+                    <p class="footer-desc">Experience the pinnacle of luxury in the heart of the jungle. Where nature
+                        meets elegance.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph ph-twitter-logo"></i></a>
+                        <a href="#" class="social-link"><i class="ph ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-col links-col">
+                    <h3 class="footer-heading">Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#villas">Villas</a></li>
+                        <li><a href="#dining">Dining</a></li>
+                        <li><a href="#wellness">Wellness</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col contact-col">
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="ph ph-map-pin"></i> 123 Jungle Ave, Costa Rica</li>
+                        <li><i class="ph ph-phone"></i> +506 1234 5678</li>
+                        <li><i class="ph ph-envelope"></i> reservations@santamaria.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-col newsletter-col">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn-gold">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Santa Maria Resort. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/creative.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 </html>

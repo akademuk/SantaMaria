@@ -50,7 +50,7 @@ gsap.from('.bento-item', {
 // Rooms Slider (Simple fade up for now, Swiper handles the rest)
 gsap.from('.room-card', {
     scrollTrigger: {
-        trigger: '.rooms-slider',
+        trigger: '.rooms-grid',
         start: 'top 80%',
     },
     y: 50,
@@ -78,20 +78,19 @@ gsap.utils.toArray('.feature-item').forEach((item, i) => {
 // Infrastructure Horizontal Scroll
 // Note: We are using native CSS scroll snap, but we can add a parallax effect to images
 gsap.utils.toArray('.infra-card img').forEach(img => {
-    gsap.to(img, {
-        scrollTrigger: {
-            trigger: img.closest('.infra-card'),
-            containerAnimation: null, // If we were using a GSAP horizontal scroll, we'd need this
-            start: 'left right',
-            end: 'right left',
-            scrub: true,
-            horizontal: true // This only works if the scroller is horizontal, which it isn't (the container is)
-        },
-        // Since we are using native scroll, GSAP ScrollTrigger horizontal is tricky without a proxy.
-        // Let's keep it simple: just a fade in when they come into view vertically if possible, 
-        // or just let CSS handle the layout.
-        // Actually, let's animate the section title.
-    });
+    gsap.fromTo(img,
+        { scale: 1.1 },
+        {
+            scale: 1,
+            scrollTrigger: {
+                trigger: img.closest('.infra-card'),
+                start: 'top 90%',
+                end: 'bottom top',
+                scrub: true,
+            },
+            ease: 'none'
+        }
+    );
 });
 
 gsap.from('.infra-text', {
